@@ -2,12 +2,15 @@
 
 namespace Tests\Feature;
 
+use App\Http\Controllers\ShopController;
 use App\Models\Shop;
 use App\Models\ShopType;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Support\Str;
 use Tests\TestCase;
+
+use function PHPUnit\Framework\assertTrue;
 
 class ShopTest extends TestCase
 {
@@ -52,5 +55,7 @@ class ShopTest extends TestCase
 
     public function test_status(): void
     {
+        $shop_controller = new ShopController;
+        assertTrue($shop_controller->getStatus(1));
     }
 }

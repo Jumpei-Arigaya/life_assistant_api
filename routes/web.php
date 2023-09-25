@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ShopController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,5 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return ['Laravel' => app()->version()];
 });
+Route::resources([
+    'shop' => ShopController::class,
+]);
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
