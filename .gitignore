@@ -1,0 +1,6 @@
+settings_local.py
+*.log
+*.pyc
+__pycache__/
+db-volumes/
+db.sqlite3
