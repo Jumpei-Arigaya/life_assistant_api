@@ -12,9 +12,9 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include(router.urls)),
     path(
-        "api/",
+        "api/family/",
         include(
-            "api.urls",
+            "api.family.urls",
         ),
     ),
     path("api-auth/", include("rest_framework.urls", namespace="rest_framework")),
