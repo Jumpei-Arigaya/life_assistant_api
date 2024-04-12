@@ -12,10 +12,11 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include(router.urls)),
     path(
-        "api/family/",
+        "family/",
         include(
             "api.family.urls",
         ),
     ),
+    path("shopping/", include("api.shopping.urls")),
     path("api-auth/", include("rest_framework.urls", namespace="rest_framework")),
 ]
