@@ -4,4 +4,3 @@ from .views import ShopViewSet
 router = routers.DefaultRouter()
 router.register("shop", ShopViewSet)
 urlpatterns = router.urls
-
