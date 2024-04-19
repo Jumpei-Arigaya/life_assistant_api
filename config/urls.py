@@ -18,5 +18,6 @@ urlpatterns = [
         ),
     ),
     path("shopping/", include("api.shopping.urls")),
+    path("todo/", include("api.todo.urls")),
     path("api-auth/", include("rest_framework.urls", namespace="rest_framework")),
 ]

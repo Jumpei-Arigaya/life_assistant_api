@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "api.family",
     "api.shopping",
+    "api.todo",
 ]
 
 MIDDLEWARE = [
