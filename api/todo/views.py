@@ -1,7 +1,7 @@
 from rest_framework import viewsets, status
 from rest_framework.response import Response
-from .models import Memo
-from .serializers import MemoSerializer
+from .models import Memo, Todo
+from .serializers import MemoSerializer, TodoSerializer
 
 
 class MemoViewSet(viewsets.ModelViewSet):
@@ -17,3 +17,8 @@ class MemoViewSet(viewsets.ModelViewSet):
         return Response(
             serializer.data, status=status.HTTP_201_CREATED, headers=headers
         )
+
+
+class TodoViewSet(viewsets.ModelViewSet):
+    serializer_class = TodoSerializer
+    queryset = Todo.objects.all()
