@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "django container",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/manage.py",
+            "args": [
+                "runserver",
+                "0.0.0.0:8080",  // Djangoが実行されるホストとポートを指定します
+                "--noreload",
+            ],
+            "django": true,
+            "justMyCode": false
+        }
+    ]
+}
